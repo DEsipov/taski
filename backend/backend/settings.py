@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-j_89af+30&&4qm*8z9_(^zz8p4-ho8z_m6ylm0s$h!-p@on1_^
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', ]
 
 
 # Application definition
@@ -103,7 +103,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+# Как будет выглядть url для статики.
+STATIC_URL = '/static_backend/'
+
+# Куда будет собираться вся статика.
+STATIC_ROOT = BASE_DIR / 'static_backend'
+
+# Какой будет формироваться адрес в ссылках на картинку.
+MEDIA_URL = '/media/'
+
+# Папка, куда будут сохраняться картинки котиков.
+MEDIA_ROOT = '/var/www/taski/media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
